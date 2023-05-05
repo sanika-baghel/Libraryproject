@@ -1,0 +1,318 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: central gothic;
+}
+
+header {
+	background-image: url(images/4.jpg);
+	height: 100vh;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+	float: right;
+	list-style-type: none;
+	margin-top: 25px;
+}
+
+ul li {
+	display: inline-block;
+}
+
+ul li a {
+	text-decoration: none;
+	color: #ffff;
+	padding: 5px 20px;
+	border: 1px solid #fff;
+	transition: 0.6s ease;
+}
+
+ul li a:hover {
+	background-color: #fff;
+	color: #000;
+}
+
+.logo img {
+	float: left;
+	width: 100px;
+	height: 13vh;
+}
+
+.banner {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.title {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	opacity: .4;
+}
+
+.title h4 {
+	color: black;
+	font-size: 30px;
+}
+
+.title h1 {
+	color: black;
+	font-size: 70px;
+}
+
+.block-title {
+	font-size: 50px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 30px;
+	text-align: center;
+}
+
+div.gallery {
+	margin: 5px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 180px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 100%;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+}
+
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+.container {
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	padding: 20px;
+	width: 50%;
+	padding: 12px 24px 24px 24px;
+	margin: 48px 12px;
+}
+
+.login {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	opacity: .7;
+	margin: 70px auto;
+	color: white;
+	padding: 20px;
+	height: 300px;
+}
+
+input {
+	height: 25px;
+	width: 300px;
+}
+
+form .box {
+	margin: auto 20px;
+}
+
+.register {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	opacity: .7;
+	margin: 70px auto;
+	color: white;
+	padding: 20px;
+	height: 450px;
+}
+
+/* Dropdown*/
+.drop {
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.footer {
+	width: 100%;
+	background-color: #400000;
+}
+
+.footer .col {
+	width: 190px;
+	height: auto;
+	float: left;
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+.footer .col h2 {
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	line-height: 17px;
+	padding: 10px 0;
+	color: #ff8040;
+	text-transform: uppercase;
+}
+
+.footer .col ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer .col ul li {
+	color: white;
+	font-size: 12px;
+	padding: 5px 0px;
+}
+
+.address ul li {
+	display: inline-block;
+	padding-right: 5px !important;
+}
+
+.footer .col ul li:hover {
+	cursor: pointer;
+	color: lightgray;
+	font-weight: bold;
+}
+
+.clearfix {
+	clear: both;
+}
+
+@media only screen and (min-width: 1280px) {
+	.contain {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1139px) {
+	.contain .address {
+		width: 1000px;
+		display: block;
+	}
+	.address h2 {
+		margin: 0px;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	.footer .col {
+		width: 33%;
+	}
+	.footer .col h2 {
+		font-size: 14px;
+	}
+	.footer .col ul li {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.footer .col {
+		width: 50%;
+	}
+	.footer .col h2 {
+		font-size: 14px;
+	}
+	.footer .col ul li {
+		font-size: 13px;
+	}
+}
+
+@media only screen and (max-width: 340px) {
+	.footer .col {
+		width: 100%;
+	}
+}
+
+.dropdown-content a:hover {
+	background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+.feedback {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	opacity: .7;
+	margin: 70px auto;
+	color: white;
+	padding: 20px;
+	height: 390px;
+}
+.addbook{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+	opacity: .7;
+	margin: 70px auto;
+	color: white;
+	padding: 20px;
+	height: 390px;
+}

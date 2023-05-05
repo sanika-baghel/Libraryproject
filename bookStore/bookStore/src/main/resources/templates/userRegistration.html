@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>central library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="banner">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About us</a></li>
+				<div class=dropdown>
+					<li class="drop">Login</li>
+					<div class="dropdown-content">
+						<li><a href="userLogin">Student Login</a></li>
+						<li><a href="adminLogin">Admin Login</a></li>
+					</div>
+				</div>
+				<li><a href="userRegistration">Registration</a></li>
+				<li><a href="#feedback">Feedback</a></li>
+				<li><a href="contactus.html">contactus</a></li>
+			</ul>
+		</div>
+	</header>
+	<section>
+		<div class="register">
+			<h1
+				style="text-align: center; font-size: 35px; font-family: lucida console">Central
+				Library</h1>
+			<br> <br>
+			<h1 style="text-align: center; font-size: 25px;">Registration
+				Form</h1>
+			<br> <br>
+			<form name="Registration" th:action="@{/userRegistration}" th:object="${registration}"
+            method="post">
+				<div class="box">
+					<input type="text" id="userId" placeholder="userId" required=""><br>
+					<br> <input type="text" id="userName" placeholder="userName"
+						required=""><br> <br> 
+						<input type="text" id="userPassword"
+						placeholder="userPassword" required=""><br> <br> <input
+						type="text" id="userConfirmPassword" placeholder="userConfirmPassword" required=""><br>
+					<br> 
+					<br> <br> <input type="submit" value="Create Account"
+						onclick="registration()" />
+					</td>
+				</div>
+			</form>
+
+		</div>
+	</section>
+	<script>
+		function registration() {
+			var fname = document.getElementById("t1").value;
+			var lname = document.getElementById("t2").value;
+			var email = document.getElementById("t3").value;
+			var uname = document.getElementById("t4").value;
+			var pwd = document.getElementById("t5").value;
+			var cpwd = document.getElementById("t6").value;
+			var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+			var letters = /^[A-Za-z]+$/;
+			var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+			if (fname == '') {
+				console.log('Please enter your first name');
+			} else if (lname == '') {
+				console.log('Please enter your last name');
+			} else if (!letters.test(fname)) {
+				console.log('Name field required only alphabet characters');
+			} else if (email == '') {
+				console.log('Please enter your user email id');
+			} else if (!filter.test(email)) {
+				console.log('Invalid email');
+			} else if (uname == '') {
+				console.log('Please enter the user name.');
+			} else if (!letters.test(uname)) {
+				console.log('User name field required only alphabet characters');
+			} else if (pwd == '') {
+				console.log('Please enter Password');
+			} else if (cpwd == '') {
+				console.log('Enter Confirm Password');
+			} else if (!pwd_expression.test(pwd)) {
+				console.log('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+			} else if (pwd != cpwd) {
+				console.log('Password not Matched');
+			} else if (document.getElementById("t5").value.length < 6) {
+				console.log('Password minimum length is 6');
+			} else if (document.getElementById("t5").value.length > 12) {
+				console.log('Password max length is 12');
+			} else {
+				console.log('Thank You for Login');
+
+				window.location = "";
+			}
+		}
+	</script>
+</body>
+</html>

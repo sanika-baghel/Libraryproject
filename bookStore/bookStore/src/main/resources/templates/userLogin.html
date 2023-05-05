@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>central library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="banner">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About us</a></li>
+				<div class=dropdown>
+					<li class="drop">Login</li>
+					<div class="dropdown-content">
+						<li><a href="userLogin">Student Login</a></li>
+						<li><a href="adminLogin">Admin Login</a></li>
+					</div>
+				</div>
+				<li><a href="userRegistration">Registration</a></li>
+				<li><a href="#feedback">Feedback</a></li>
+				<li><a href="contactus.html">contactus</a></li>
+			</ul>
+		</div>
+	</header>
+	<section>
+		<div class="login">
+			<h1
+				style="text-align: center; font-size: 35px; font-family: lucida console">Central
+				Library</h1>
+			<br> <br>
+			<h1 style="text-align: center; font-size: 25px;">User Login
+				Form</h1>
+			<br> <br>
+			<form  th:action="@{/userLogin}" th:object=${registration} method="post">
+				<div class="box">
+					<input type="text" name="username" placeholder="username"
+						required=""><br> <br> <input type="password"
+						name="password" placeholder="password" required="" /><br /> <br />
+					<input type="submit" name="" value="Login" onclick="validate()" />
+				</div>
+			</form>
+			<p style="color: white; text-align: center">
+				<br/> New
+				to this Website?<a style="color: white;" href="userRegistration">sign
+					up</a>
+			</p>
+		</div>
+	</section>
+	<script>
+		function validate() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			if (username == "user" && password == "user123") {
+				alert("login succesfully");
+				return false;
+			} else {
+				alert("login failed");
+			}
+		}
+	</script>
+</body>
+</html>
